@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Flex example site</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      font-family: Arial;
+      margin: 0;
+      padding: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      background-color: purple;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    main {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    header {
+      background-color: yellow;
+      padding: 60px;
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    .goals_type {
+      display: flex;
+      justify-content: space-around;
+      background-color: #15c498;
+      align-items: center;
+      height: 60px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .goals_type a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .goals_type li:hover {
+      background-color: grey;
+      padding: 18px;
+    }
+
+    .goal_spec {
+      display: flex;
+      justify-content: space-around;
+      /*height: 100px;*/
+      margin: 0;
+      padding: 0;
+      align-items: stretch;
+    }
+
+    .goal_name {
+      background: red;
+      flex: 2;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .goal_name p {
+      padding: 20px;
+    }
+
+    .goal_add {
+      background: blue;
+      text-align: center;
+      flex: 1;
+      margin: 0;
+      padding: 0;
+    }
+
+    .goal_add p {
+      padding: 20px;
+    }
+
+    .goal_crud {
+      display: flex;
+      flex-direction: column;
+      background: grey;
+      flex: 1;
+      justify-content: space-around;
+      align-items: stretch;
+      margin: 0;
+      padding: 0;
+    }
+
+    .goal_crud li {
+      margin: 0;
+      padding: 0;
+      align-self: center;
+    }
+
+    .goal_notes {
+      display: flex;
+      background: pink;
+      flex: 1;
+      justify-content: space-around;
+      align-items: stretch;
+      margin: 0;
+      padding: 0;
+    }
+
+    .goal_notes ul {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: stretch;
+      color: red;
+    }
+
+    .goal_notes li:nth-child(odd) {
+      background: #15c498;
+      color: black;
+    }
+
+    .goal_notes li:nth-child(even) {
+      background: grey;
+      color: black;
+    }
+
+
+    footer {
+
+      background: blue;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      height: 80px;
+    }
+
+    aside {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      flex: 0.1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="content">
+    <header> My goals list </header>
+
+    <main>
+
+      <ul class="goals_type">
+        <li><a href="#">Completed</a></li>
+        <li><a href="#">In progress</a></li>
+        <li><a href="#">Cancelled</a></li>
+      </ul>
+      <div class="goal_spec">
+        <div class="goal_name">
+          <p>GOAL - HEALTHY LIFESTYLE</p>
+        </div>
+        <ul class="goal_crud">
+          <li>ADD A NEW SUBGOAL</li>
+          <li>REMOVE THE GOAL</li>
+          <li>UPDATE THE GOAL</li>
+        </ul>
+
+        <div class="goal_add">
+          <p>Create a new goal</p>
+        </div>
+      </div>
+
+
+      <div class="goal_notes">
+        <ul>
+          <h3>Subgoal</h3>
+          <li>Drink more water</li>
+          <li>Exercise</li>
+          <li>Eat more veggies</li>
+        </ul>
+        <ul>
+          <h3>How often?</h3>
+          <li>Daily</li>
+          <li>3 times a week</li>
+          <li>Daily</li>
+        </ul>
+        <ul>
+          <h3>Notes</h3>
+          <li>Water near my night table</li>
+          <li>Go to the gym during lunchreak</li>
+          <li>One portion with every meal</li>
+        </ul>
+      </div>
+
+    </main>
+    <aside>
+      <div><i class="fa fa-search"></i></div>
+      <div><i class="fa fa-user"></i></div>
+      <div><i class="fa fa-cog"></i></div>
+      <div><i class="fa fa-facebook"></i></div>
+      <div><i class="fa fa-twitter"></i></div>
+      <div><i class="fa fa-instagram"></i></div>
+    </aside>
+
+  </div>
+  <footer><br><br> CLICK HERE TO GET MOTIVATIONAL REMINDER KICK
+  </footer>
+
+</body>
+
+</html>

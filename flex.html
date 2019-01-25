@@ -10,6 +10,7 @@
       font-family: Arial;
       margin: 0;
       padding: 0;
+      font-family: "Lato", sans-serif;
     }
 
     * {
@@ -34,9 +35,9 @@
     }
 
     header {
-      background-color: yellow;
-      padding: 60px;
+      background-color: #ffeb00;
       text-align: center;
+      padding: 20px;
     }
 
     ul {
@@ -73,7 +74,7 @@
     }
 
     .goal_name {
-      background: red;
+      background: #db487b;
       flex: 2;
       margin: 0;
       padding: 0;
@@ -85,7 +86,7 @@
     }
 
     .goal_add {
-      background: blue;
+      background: #ffeb00;
       text-align: center;
       flex: 1;
       margin: 0;
@@ -115,7 +116,7 @@
 
     .goal_notes {
       display: flex;
-      background: pink;
+      background: #feffc0;
       flex: 1;
       justify-content: space-around;
       align-items: stretch;
@@ -127,7 +128,7 @@
       display: flex;
       flex: 1;
       flex-direction: column;
-      justify-content: space-around;
+      justify-content: flex-start;
       align-items: stretch;
       color: red;
     }
@@ -142,10 +143,13 @@
       color: black;
     }
 
+    .goal_notes li {
+      padding: 20px;
+    }
 
     footer {
 
-      background: blue;
+      background: #342972;
       margin: 0;
       padding: 0;
       text-align: center;
@@ -159,12 +163,68 @@
       align-items: center;
       flex: 0.1;
     }
+
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: grey;
+      opacity: 0.9;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #28292b;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {
+        padding-top: 15px;
+      }
+      .sidenav a {
+        font-size: 18px;
+      }
+    }
   </style>
 </head>
 
 <body>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">History</a>
+    <a href="#">Premium</a>
+    <a href="#">Profile</a>
+    <a href="#">Extra</a>
+  </div>
+
+
   <div class="content">
-    <header> My goals list </header>
+    <header>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; GOALS</span>
+    </header>
 
     <main>
 
@@ -195,18 +255,30 @@
           <li>Drink more water</li>
           <li>Exercise</li>
           <li>Eat more veggies</li>
+          <li>Go sleep earlier</li>
+          <li>Meditate</li>
+          <li>Work less</li>
+          <li>Delegate tasks</li>
         </ul>
         <ul>
           <h3>How often?</h3>
           <li>Daily</li>
           <li>3 times a week</li>
           <li>Daily</li>
+          <li>Daily</li>
+          <li>2 a day</li>
+          <li>Weekday</li>
+          <li>AOAP</li>
         </ul>
         <ul>
           <h3>Notes</h3>
           <li>Water near my night table</li>
-          <li>Go to the gym during lunchreak</li>
+          <li>Go to the gym during lunchbreak</li>
           <li>One portion with every meal</li>
+          <li>Set an alarm clock</li>
+          <li>Download a calm app</li>
+          <li>Take less work home</li>
+          <li>Ask for help</li>
         </ul>
       </div>
 
@@ -223,6 +295,15 @@
   </div>
   <footer><br><br> CLICK HERE TO GET MOTIVATIONAL REMINDER KICK
   </footer>
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "179px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
 
 </body>
 

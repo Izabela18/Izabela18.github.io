@@ -1,0 +1,167 @@
+<<!DOCTYPE html>
+  <html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>CSS borders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+      html {
+
+        height: 100%;
+        background: url("https://images.unsplash.com/photo-1466026396492-d69f93144acc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80");
+        background-size: cover;
+      }
+
+      #box1 {
+
+        border: solid .330em;
+        -o-border-image: linear-gradient(#E3E36A, rgba(100, 76, 57, 0) 70%) 1;
+        border-image: -webkit-gradient(linear, left top, left bottom, from(#E3E36A), color-stop(70%, rgba(100, 76, 57, 0))) 1;
+        border-image: linear-gradient(#E3E36A, rgba(100, 76, 57, 0) 70%) 1;
+        padding: .330em;
+        background: -webkit-gradient(linear, left top, left bottom, from(#CBFF8C), color-stop(80%, rgba(225, 135, 40, 0))) content-box;
+        background: linear-gradient(#CBFF8C, rgba(225, 135, 40, 0) 80%) content-box;
+        height: 50vmin;
+        max-width: 13em;
+        max-height: 7em;
+        color: white;
+        font: 700 2em/2 comic sans ms, verdana, sans serif;
+        text-align: center;
+      }
+
+      #box2 {
+
+
+        border: solid .5em #D5C9DF;
+        padding: .5em;
+        background: #828A95 content-box;
+        height: 50vmin;
+        max-width: 13em;
+        max-height: 7em;
+        color: white;
+        font: 700 2em/3 comic sans ms, verdana, sans serif;
+        text-align: center;
+        -webkit-filter: drop-shadow(1px 2px 2px #CCD7E4);
+        filter: drop-shadow(1px 2px 2px #CCD7E4);
+      }
+
+      #box3 {
+
+        border: solid 0.5em rgba(21, 122, 110, 0.7);
+        height: 50vmin;
+        max-width: 13em;
+        max-height: 7em;
+        background: rgba(76, 164, 84, 0.40);
+        color: white;
+        font: 700 2em/3 comic sans ms, verdana, sans serif;
+        text-align: center;
+        -webkit-box-shadow: 1px -7px 13px -1px inset;
+        box-shadow: 1px -7px 13px -1px inset;
+      }
+
+      #box4 {
+
+        border: solid 1.5em rgba(0, 0, 0, 0.2);
+        height: 50vmin;
+        max-width: 13em;
+        max-height: 7em;
+        background: url(https://images.unsplash.com/photo-1463123081488-789f998ac9c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80) 50%/cover border-box padding-box;
+        font-size: 2em;
+        position: relative;
+      }
+
+      #box4::before {
+        position: absolute;
+        z-index: -1;
+        top: -1.5em;
+        right: -1.5em;
+        bottom: -1.5em;
+        left: -1.5em;
+        border: inherit;
+        border-color: transparent;
+        background: inherit;
+        background-clip: border-box;
+        -webkit-filter: blur(9px);
+        filter: blur(9px);
+        -webkit-clip-path: inset(0);
+        clip-path: inset(0);
+        content: "";
+      }
+
+      #box5 {
+
+        border: solid 1.5em rgba(244, 241, 66, 0.5);
+        height: 50vmin;
+        max-width: 13em;
+        max-height: 7em;
+        background: url(https://images.unsplash.com/photo-1519144277613-6bf7de129a5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60) 50%/cover border-box padding-box;
+        font-size: 2em;
+
+        position: relative;
+        -webkit-filter: hue-rotate(150deg);
+        filter: hue-rotate(150deg);
+      }
+
+      #box5::before {
+
+
+        position: absolute;
+        z-index: -1;
+        background: inherit;
+        background-clip: border-box;
+        content: "";
+      }
+
+      #box6 {
+
+        border: solid 1.5em rgba(244, 241, 66, 0.5);
+        height: 50vmin;
+        max-width: 13em;
+        max-height: 7em;
+        background: url(https://images.unsplash.com/photo-1543158181-7ecb8d8f3f81?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60) 50%/cover border-box padding-box;
+        font-size: 2em;
+
+        position: relative;
+        -webkit-filter: saturate(7) brightness(0.80);
+        filter: saturate(7) brightness(0.80);
+      }
+
+      #box6::before {
+        position: absolute;
+        z-index: -1;
+        background: inherit;
+        background-clip: content-box;
+        content: "";
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col m4  boxes" id="box1">content</div>
+        <div class="col m4  boxes"></div>
+        <div class="col m4 boxes" id="box2">content</div>
+      </div>
+      <div class="row">
+        <div class="col m4  boxes"></div>
+        <div class="col m4  boxes" id="box3">content</div>
+        <div class="col m4 boxes"></div>
+      </div>
+      <div class="row">
+        <div class="col m4  boxes" id="box4"></div>
+        <div class="col m4  boxes"></div>
+        <div class="col m4 boxes" id="box5"></div>
+      </div>
+      <div class="row">
+        <div class="col m4  boxes"></div>
+        <div class="col m4  boxes" id="box6"></div>
+        <div class="col m4 boxes"></div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
+
+  </html>
